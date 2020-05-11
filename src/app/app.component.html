@@ -1,0 +1,22 @@
+<div class="container">
+<nav class="navbar navbar-default">
+<ul class="nav navbar-nav">
+   <li>
+       <a  routerLink="List">List</a>      
+   </li>
+   <li>       
+        <a  routerLink="Create">Create</a>
+    </li>
+</ul>
+</nav>
+<div *ngIf="EnabledLoadinfImage">
+    <span >Loading page...</span>
+</div>
+<router-outlet></router-outlet>
+</div>
+
+<!-- <div class="container">
+<app-list-employees></app-list-employees>
+</div> -->
+ 
+

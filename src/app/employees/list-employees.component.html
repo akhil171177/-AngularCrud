@@ -1,0 +1,133 @@
+<!-- session 34  -->
+<!-- 
+<button (click)="NextEmployee()" class="btn btn-promary-">View Next </button>
+<br/><br/>
+<app-display-employee [employee]="employeeToDisplay" ></app-display-employee>  -->
+<!-- End session 35  -->
+{{displayEmpName}}
+<!-- Session 36 -->
+<!-- <div class="panel panel-default"  *ngFor=" let emp of employees ">
+<app-display-employee [employee]="emp"  (notify)="handleNotify($event)"></app-display-employee> 
+</div> -->
+<!-- end  Session 3-->
+<!-- Session 37 -->
+<h1 #h1variable>
+
+</h1>
+
+<div class="form-group">
+<input type="text" class="form-control" style="width: 500px;"   placeholder="search employee" [(ngModel)]="searchParam" (input)="EmployeeFilter()"/>   
+</div>
+<!-- implement pipe for employee serach  -->
+<!-- <div class="panel panel-default"  *ngFor=" let emp of employees | EmployeeSearchPipe:searchParam"> -->
+  <!-- implement employee serach with out pipe filter -->
+  
+  <div class="panel panel-default"  *ngFor=" let emp of employeesFilter">
+  <!-- <div class="panel panel-default"  *ngFor=" let emp of employees"> -->
+<!-- <div (click)="h1variable.innerHTML=childcomponent.employee.name + ' ' + childcomponent.employee.gender "  >  -->
+  <!-- <div (click)="h1variable.innerHTML=childcomponent.DisplayEmployeeDetails()"  >  -->
+  
+<div>
+<!-- <div (click)="employeesDetails(emp.id)" > -->
+<app-display-employee [employee]="emp" #childcomponent ></app-display-employee>
+</div>
+</div>
+<!--end Session 37 -->
+<!-- Session 33 -->
+<!-- <div class="panel panel-default" *ngFor=" let emp of employees ">
+  <app-display-employee [employee]="emp"></app-display-employee> 
+
+</div> -->
+<!--End  Session 33 -->
+
+<!-- Session 32 -->
+
+<!--
+  <div class="panel panel-default" *ngFor=" let emp of employees ">
+  <div class="panel-heading">
+  <h3 class="panel-title">{{ emp.name}}</h3>
+
+</div>
+<div class="panel-body">
+<div class="col-xs-10">
+ <div class="row">
+<div class="col-xs-4 ">
+  <img class="imageClass" [src]= "emp.photoPath" />
+</div>
+<div clas="col-xs-8">
+<div class="row">
+<div class="col-xs-6">
+Gender
+</div>
+<div class="col-xs-6">
+   : {{ emp.gender}}
+  </div>
+
+</div>
+<div class="row">
+    <div class="col-xs-6">
+    Date of Birth
+    </div>
+    <div class="col-xs-6">
+       : {{ emp.dateOfBirth}}
+      </div>
+    
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            contract Refrence
+        </div>
+        <div class="col-xs-6">
+           : {{ emp.contractPrefrence}}
+          </div>
+        
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+            Email
+            </div>
+            <div class="col-xs-6">
+               : {{ emp.email}}
+              </div>
+            
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    phone Number
+                </div>
+                <div class="col-xs-6">
+                   : {{ emp.phoneNumber}}
+                  </div>
+                
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Department
+                    </div>
+                    <div class="col-xs-6" [ngSwitch]="emp.department">
+                       : 
+                       <span *ngSwitchCase="1">IT</span>
+                       <span *ngSwitchCase="2">HR</span>
+                       <span *ngSwitchCase="3">Payroll Department</span>
+                       <span *ngSwitchCase="4">Account Department</span>
+                       <span *ngSwitchDefault>N/A</span>
+                      </div>
+                    
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            isActive
+                        </div>
+                        <div class="col-xs-6">
+                           : {{ emp.isActive}}
+                          </div>
+                        
+                        </div>
+  </div>
+  </div>
+</div>  
+
+</div> 
+</div>-->
+
+<!--End Session 32 -->

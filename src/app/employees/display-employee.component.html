@@ -1,0 +1,193 @@
+
+<!-- session 36 -->
+<!-- <div class="panel panel-primary" (click)="NotifyEvent()"> -->
+  <!-- [isPanelHidden]=""  -->
+ 
+  <app-accodion-component [title]="employee.name" 
+  [isPanelHidden]="true" 
+  [hasJustViewed]="employee.id===selectedEmpid"
+  >
+  
+      <div class="col-xs-10 contentBody">
+        <div class="row">
+          <div class="col-xs-4 ">
+            <img class="imageClass" [src]="employee.photoPath" />
+          </div>
+          <div clas="col-xs-8">
+            <div class="row">
+              <div class="col-xs-6">
+                Gender
+              </div>
+              <div class="col-xs-6">
+                : {{ employee.gender}}
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                Date of Birth
+              </div>
+              <div class="col-xs-6">
+                : {{ employee.dateOfBirth}}
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                contract Refrence
+              </div>
+              <div class="col-xs-6">
+                : {{ employee.contractPrefrence}}
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                Email
+              </div>
+              <div class="col-xs-6">
+                : {{ employee.email}}
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                phone Number
+              </div>
+              <div class="col-xs-6">
+                : {{ employee.phoneNumber}}
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                Department:
+              </div>
+              <div class="col-xs-6" [ngSwitch]="employee.department">
+                
+                <span *ngSwitchCase="1">IT</span>
+                <span *ngSwitchCase="2">HR</span>
+                <span *ngSwitchCase="3">Payroll Department</span>
+                <span *ngSwitchCase="4">Account Department</span>
+                <span *ngSwitchDefault>N/A</span>
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                isActive
+              </div>
+              <div class="col-xs-6">
+                : {{ employee.isActive}}
+              </div>
+  
+            </div>
+           
+          </div>
+        </div>
+      </div>
+         
+
+    <div class="contentFooter">
+      <button class="btn btn-primary" (click)="VeiwEmployeeDeatils()" > View</button> 
+      <button class="btn btn-primary"  (click)="EditEmployeeDeatils()"> Edit</button>
+      <button class="btn btn-danger"  (click)="DeleteEmployeeDeatils()"> Delete</button>
+  
+    </div>
+
+  </app-accodion-component>
+  <!-- implement the componet with out ng-content -->
+<!--  
+  <div class="panel panel-primary" [class.panel-success]="employee.id===selectedEmpid" (click)="isPanelHidden=!isPanelHidden">
+  <div class="panel-heading pointerCursor">
+    <h3 class="panel-title">{{ employee.name}}</h3>
+
+  </div>
+  <div class="panel-body" [hidden]="isPanelHidden">
+    <div class="col-xs-10">
+      <div class="row">
+        <div class="col-xs-4 ">
+          <img class="imageClass" [src]="employee.photoPath" />
+        </div>
+        <div clas="col-xs-8">
+          <div class="row">
+            <div class="col-xs-6">
+              Gender
+            </div>
+            <div class="col-xs-6">
+              : {{ employee.gender}}
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              Date of Birth
+            </div>
+            <div class="col-xs-6">
+              : {{ employee.dateOfBirth}}
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              contract Refrence
+            </div>
+            <div class="col-xs-6">
+              : {{ employee.contractPrefrence}}
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              Email
+            </div>
+            <div class="col-xs-6">
+              : {{ employee.email}}
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              phone Number
+            </div>
+            <div class="col-xs-6">
+              : {{ employee.phoneNumber}}
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              Department
+            </div>
+            <div class="col-xs-6" [ngSwitch]="employee.department">
+              :
+              <span *ngSwitchCase="1">IT</span>
+              <span *ngSwitchCase="2">HR</span>
+              <span *ngSwitchCase="3">Payroll Department</span>
+              <span *ngSwitchCase="4">Account Department</span>
+              <span *ngSwitchDefault>N/A</span>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              isActive
+            </div>
+            <div class="col-xs-6">
+              : {{ employee.isActive}}
+            </div>
+
+          </div>
+         
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="panel-footer" [hidden]="isPanelHidden">   
+    <button class="btn btn-primary" (click)="VeiwEmployeeDeatils()" > View</button> 
+    <button class="btn btn-primary"  (click)="EditEmployeeDeatils()"> Edit</button>
+    <button class="btn btn-danger"  (click)="DeleteEmployeeDeatils()"> Delete</button>
+
+      </div>
+</div> -->

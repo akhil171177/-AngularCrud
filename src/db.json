@@ -1,0 +1,56 @@
+{
+  "employeeList": [
+    {
+      "id":1,
+      "name":"Mark",
+      "gender":"Male",   
+      "contractPrefrence":"email",
+      "dateOfBirth" : "11/12/1980",
+      "department":"NCS",
+      "email":"Mark@gmail.com",
+      "phoneNumber":"111131",
+      "isActive":true,
+      "photoPath":"assets/images/Mark.jpg",
+      "password":"12",
+      "confirmpassword":"12"        
+    },
+    {
+      "id":2,
+      "name":"John",
+      "gender":"Male",   
+      "contractPrefrence":"Phone",
+      "phoneNumber": "8324701234",
+      "dateOfBirth" : "11/12/1980",
+      "department":"1",
+      "email":"John@gmail.com",        
+      "isActive":true,
+      "photoPath":"assets/images/John.jpg",
+      "password":"123",
+      "confirmpassword":"123"
+    },
+    {
+      "id":3,
+      "name":"Mary",
+      "gender":"Female",   
+      "contractPrefrence":"Phone",
+      "phoneNumber": "8324701236",
+      "dateOfBirth" : "11/12/1982",
+      "department":"2",
+      "email":"Mary@gmail.com",       
+      "isActive":true,
+      "photoPath":"assets/images/Mary.jpg",
+      "password":"1234",
+      "confirmpassword":"1234"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

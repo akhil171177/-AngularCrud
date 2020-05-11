@@ -1,0 +1,12 @@
+<div class="panel panel-primary" [class.panel-success]="hasJustViewed"  (click)="isPanelHidden=!isPanelHidden">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ title}}</h3>
+  </div>
+  <div class="panel-body" [hidden]="isPanelHidden" >
+<ng-content select=".contentBody"></ng-content>
+  </div>
+<div class="panel-footer" [hidden]="isPanelHidden">
+  <ng-content select=".contentFooter"></ng-content>
+</div>
+
+</div>

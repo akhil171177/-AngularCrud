@@ -1,0 +1,98 @@
+
+<!-- session 40 -->
+<div class="panel panel-primary" >
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{ employee.name}}</h3>
+  
+    </div>
+    <div class="panel-body">
+      <div class="col-xs-10">
+        <div class="row">
+          <div class="col-xs-4 ">
+            <img class="imageClass" [src]="employee.photoPath" />
+          </div>
+          <div clas="col-xs-8">
+            <div class="row">
+              <div class="col-xs-6">
+                Gender
+              </div>
+              <div class="col-xs-6">
+                : {{ employee.gender}}
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                Date of Birth
+              </div>
+              <div class="col-xs-6">
+                : {{ employee.dateOfBirth}}
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                contract Refrence
+              </div>
+              <div class="col-xs-6">
+                : {{ employee.contractPrefrence}}
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                Email
+              </div>
+              <div class="col-xs-6">
+                : {{ employee.email}}
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                phone Number
+              </div>
+              <div class="col-xs-6">
+                : {{ employee.phoneNumber}}
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                Department
+              </div>
+              <div class="col-xs-6" [ngSwitch]="employee.department">
+                :
+                <span *ngSwitchCase="1">IT</span>
+                <span *ngSwitchCase="2">HR</span>
+                <span *ngSwitchCase="3">Payroll Department</span>
+                <span *ngSwitchCase="4">Account Department</span>
+                <span *ngSwitchDefault>N/A</span>
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                isActive
+              </div>
+              <div class="col-xs-6">
+                : {{ employee.isActive}}
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  <div class="panel-fotter">
+<a  [routerLink]="['/List', {id:employee.id}]" class="btn btn-primary" 
+ queryParamsHandling="merge" [queryParams] ="{'Name':'Akhil'}"
+  >Back to emp list</a>
+  
+<a  class="btn btn-primary pull-right"  (click)="NextEmployee()" >next Employee</a>
+</div>
+
+  </div>
